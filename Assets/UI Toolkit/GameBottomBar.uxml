@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="FullPanel" style="top: auto; left: auto; position: absolute; right: auto; bottom: 0; height: 200px; width: 1280px; background-color: rgb(0, 0, 20); flex-direction: row;">
+        <ui:VisualElement name="MapHolder" style="flex-grow: 1; width: 200px; height: 200px; background-color: rgb(0, 0, 0); position: absolute;">
+            <ui:VisualElement name="MapImage" style="flex-grow: 1; background-color: rgb(142, 2, 101); margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ButtonHolder" style="flex-grow: 1; position: absolute; height: 200px; width: 780px; margin-left: 200px; background-color: rgba(0, 0, 128, 0.79);" />
+        <ui:VisualElement name="InfoHolder" style="flex-grow: 1; position: absolute; height: 200px; width: 300px; margin-left: 980px; background-color: rgba(87, 48, 8, 0.93);" />
+    </ui:VisualElement>
+</ui:UXML>
