@@ -17,7 +17,8 @@ public class GridInitializer : MonoBehaviour, IGroupInitializer
         world.GetStash<GridDrawRequestComponent>().Add(entity);
         world.GetStash<GridOccupancyComponent>().Add(entity, new GridOccupancyComponent()
         {
-            buildIdMap = new int[config.gridSize.x * config.gridSize.y]
+            buildEntityMap = new Entity[config.gridSize.x * config.gridSize.y],
+            occupancyMap = new bool[config.gridSize.x * config.gridSize.y]
         });
         world.GetStash<GridTerrainComponent>().Add(entity, new GridTerrainComponent()
         {

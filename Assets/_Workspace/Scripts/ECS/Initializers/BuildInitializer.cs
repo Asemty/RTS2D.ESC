@@ -23,6 +23,8 @@ public class BuildInitializer : MonoBehaviour, IGroupInitializer
     {
         group.AddSystem(new BuildingConstructionSystem());
         group.AddSystem(new StartBuildingByMouseSystem());
+        group.AddSystem(new BuildingViewSyncSystem());
+        group.AddSystem(new BuildingViewClearSystem());
         return group;
     }
 }

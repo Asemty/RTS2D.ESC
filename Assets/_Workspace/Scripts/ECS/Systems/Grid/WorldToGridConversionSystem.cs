@@ -38,8 +38,8 @@ public class WorldToGridConversionSystem : ISystem
         {
             ref var wPos = ref worldPositionStash.Get(entity);
             ref var gPos = ref gridPositionStash.Get(entity);
-            var x = Mathf.Clamp((int)(wPos.position.x / cellInfo.cellSize.x), 0, gridInfo.gridSize.x);
-            var y = Mathf.Clamp((int)(wPos.position.y / cellInfo.cellSize.y), 0, gridInfo.gridSize.y);
+            var x = Mathf.Clamp((int)(wPos.position.x / cellInfo.cellSize.x), 0, gridInfo.gridSize.x - 1);
+            var y = Mathf.Clamp((int)(wPos.position.y / cellInfo.cellSize.y), 0, gridInfo.gridSize.y - 1);
             gPos.position = new Vector2Int(x, y);
         }
     }

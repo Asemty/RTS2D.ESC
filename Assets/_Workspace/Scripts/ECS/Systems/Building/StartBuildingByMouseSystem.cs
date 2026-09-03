@@ -49,8 +49,8 @@ public class StartBuildingByMouseSystem : ISystem
         ref var buildDataArchive = ref buildDataArchiveStash.Get(buildDatasFilter.First());
         ref var cursorPos = ref gridPositionStash.Get(cursorFilter.First());
 
-        var data = buildDataArchive.buildsArchive[0];
-        if (!BuildingServices.CanBuild(gridConfig.gridSize, gridMap.buildIdMap, cursorPos.position, data)) return;
+        var data = buildDataArchive.buildsArchive[1];
+        if (!BuildingServices.CanBuild(gridConfig.gridSize, gridMap.occupancyMap, cursorPos.position, data)) return;
         buildRequestStash.Add(grid, new BuildRequestComponent()
         {
             buildData = data,

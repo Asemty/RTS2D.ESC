@@ -7,7 +7,8 @@ public struct GridConfigComponent : IComponent
 }
 public struct GridOccupancyComponent : IComponent
 {
-    public int[] buildIdMap;
+    public Entity[] buildEntityMap;
+    public bool[] occupancyMap;
 }
 public struct GridTerrainComponent : IComponent
 {
