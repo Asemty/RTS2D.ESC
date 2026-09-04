@@ -4,6 +4,7 @@ using UnityEngine;
 public struct MouseInfoComponent : IComponent
 {
     public Vector2 screenPosition;
+    public bool isOverUI;
     public bool[] isDown;
     public bool[] isOldDown;
     public bool[] isClick;

@@ -1,5 +1,6 @@
 using Scellecs.Morpeh;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MouseInfoSystem : ISystem
 {
@@ -18,7 +19,8 @@ public class MouseInfoSystem : ISystem
     {
         ref MouseInfoComponent mouse = ref World.GetStash<MouseInfoComponent>().Get(filter.FirstOrDefault());
         mouse.screenPosition = Input.mousePosition;
-        for(int i = 0; i < 3; i++)
+        mouse.isOverUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+        for (int i = 0; i < 3; i++)
         {
             mouse.isOldDown[i] = mouse.isDown[i];
             mouse.isDown[i] = Input.GetMouseButton(i);

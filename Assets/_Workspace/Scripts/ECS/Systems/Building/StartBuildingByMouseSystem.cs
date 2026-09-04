@@ -42,7 +42,7 @@ public class StartBuildingByMouseSystem : ISystem
     public void OnUpdate(float deltaTime)
     {
         ref var mouse = ref mouseInfoStash.Get(mouseFilter.First());
-        if (!mouse.isClick[0]) return;
+        if (!mouse.isClick[0] || mouse.isOverUI) return;
         var grid = gridFilter.First();
         ref var gridConfig = ref gridConfigStash.Get(grid);
         ref var gridMap = ref gridOccupancyStash.Get(grid);
